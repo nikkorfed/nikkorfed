@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 80;
 
 app.use(express.static("public"));
 
@@ -11,6 +11,10 @@ app.use("/api/ruslan", (req, res) => {
     response: { text: answer, end_session: false },
     version: "1.0",
   });
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile("404.html", { root: "public" });
 });
 
 app.listen(port, () => {
