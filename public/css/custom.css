@@ -1,0 +1,91 @@
+/**
+ * CUSTOM CSS
+ *
+ * Here you can add your custom CSS code.
+ */
+
+/*# sourceMappingURL=custom.css.map */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.eot');
+    src: local('Lato Regular'), local('Lato-Regular'),
+        url('/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Lato-Regular.woff') format('woff'),
+        url('/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Semibold.eot');
+    src: local('Lato Semibold'), local('Lato-Semibold'),
+        url('/fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Lato-Semibold.woff') format('woff'),
+        url('/fonts/Lato-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Bold.eot');
+    src: local('Lato Bold'), local('Lato-Bold'),
+        url('/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Lato-Bold.woff') format('woff'),
+        url('/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  text-align: justify;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.t-title__first-word, .t-title__second-word {
+  text-transform: none;
+}
+
+.c-header p {
+  text-align: inherit;
+}
+
+.t-section__header {
+  border: none;
+}
+
+.language-type {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: .6;
+}
+
+.c-work__timeframe, .c-work__location {
+  font-size: 0.9rem;
+}
+
+.c-work__title {
+  font-size: 0.95rem;
+}
+
+.dot {
+  margin: 0 5px;
+}
+
+.ps {
+  opacity: .3;
+}
+
+.indents .o-media__figure {
+  margin-right: 20px;
+}
