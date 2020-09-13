@@ -29,6 +29,11 @@ app.all("/api/ruslan", (req, res) => {
   res.json({ response: { text: answer, tts: answer, end_session: false }, version: "1.0" });
 });
 
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.status(500).send("Что-то пошло не так...");
+});
+
 app.use((req, res) => {
   res.status(404).sendFile("404.html", { root: "public" });
 });
