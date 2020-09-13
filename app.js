@@ -11,7 +11,7 @@ app.all("/api/ruslan", (req, res) => {
   let word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
   let answer;
 
-  if (!word) answer = "Хорошо! Теперь я буду вести себя как Руслан. Скажите мне любое слово.";
+  if (!word) answer = "Теперь я буду вести себя как Руслан. Скажите мне любое слово.";
   else {
     word = word.slice(1);
     if (word[0] == "е") answer = "хуе" + word.slice(1);
