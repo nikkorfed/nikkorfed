@@ -21,7 +21,7 @@ app.all("/api/ruslan", (req, res) => {
     else answer = "хуе" + word;
   }
 
-  res.json({ response: { text: answer, end_session: false }, version: "1.0" });
+  res.json({ response: { text: answer, tts: answer, end_session: false }, version: "1.0" });
 });
 
 app.use((req, res) => {
@@ -36,4 +36,6 @@ try {
 } catch {}
 
 // http.createServer(app).listen(80);
-https.createServer(options, app).listen(443);
+https.createServer(options, app).listen(443, () => {
+  console.log("Сервер запущен...");
+});
