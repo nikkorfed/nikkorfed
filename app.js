@@ -5,6 +5,7 @@ const fs = require("fs");
 const app = express();
 
 app.use(express.static("public"));
+app.use(express.json());
 
 app.use("/api/ruslan", (req, res) => {
   const word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
@@ -20,8 +21,8 @@ app.use((req, res) => {
 });
 
 const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem"),
+  // key: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem"),
+  // cert: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem"),
 };
 
 http.createServer(app).listen(80);
