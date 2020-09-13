@@ -21,7 +21,7 @@ app.all("/api/ruslan", (req, res) => {
   //   else answer = "хуе" + word;
   // }
 
-  res.json({ response: { text: "Проверка", tts: answer, end_session: false }, version: "1.0" });
+  res.json({ response: { text: "Проверка", tts: "Проверка", end_session: false }, version: "1.0" });
 });
 
 // app.use((req, res) => {
