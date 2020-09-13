@@ -8,7 +8,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.use("/api/ruslan", (req, res) => {
-  const word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
+  let word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
   let answer;
 
   if (!word) answer = "Хорошо! Теперь я буду вести себя как Руслан. Скажите мне любое слово.";
