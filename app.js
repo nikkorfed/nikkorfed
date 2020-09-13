@@ -25,10 +25,12 @@ app.use((req, res) => {
   res.status(404).sendFile("404.html", { root: "public" });
 });
 
-const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem"),
-};
+const options = {};
+
+try {
+  options.key = fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem");
+  options.cert = fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem");
+} catch {}
 
 http.createServer(app).listen(80);
 https.createServer(options, app).listen(443);
