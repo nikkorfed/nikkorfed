@@ -7,6 +7,11 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(req.body);
+  next();
+});
+
 app.all("/api/ruslan", (req, res) => {
   let word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
   let answer;
