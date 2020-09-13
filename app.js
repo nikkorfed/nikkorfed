@@ -21,8 +21,8 @@ app.use((req, res) => {
 });
 
 const options = {
-  // key: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem"),
-  // cert: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem"),
+  key: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/nikkorfed.ru/cert.pem"),
 };
 
 http.createServer(app).listen(80);
