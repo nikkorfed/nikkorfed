@@ -32,7 +32,7 @@ app.all("/api/ruslan", (req, res) => {
     else answer = "хуе" + word;
   }
 
-  res.json({ response: { text: answer, tts: answer, end_session: false }, version: "1.0" });
+  res.json({ response: { text: answer, tts: `${answer.slice(0, 2)} ${answer.slice(2)}`, end_session: false }, version: "1.0" });
 });
 
 app.use((err, req, res, next) => {
