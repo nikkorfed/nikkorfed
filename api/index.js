@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 });
 
 router.all("/ruslan", ruslan);
-router.all("/fedrych", fedrychbot);
+router.all("/fedrych", fedrych);
 
 router.use((err, req, res, next) => {
   console.log(err);
