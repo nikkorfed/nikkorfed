@@ -9,9 +9,7 @@ app.use("/api", api);
 
 app.use(express.static("public"));
 
-app.use((req, res) => {
-  res.status(404).sendFile("404.html", { root: "public" });
-});
+app.use((req, res) => res.status(404).sendFile("404.html", { root: "public" }));
 
 const options = {};
 

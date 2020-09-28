@@ -1,15 +1,4 @@
-const express = require("express");
-const router = express.Router();
-
-router.use(express.json());
-
-router.use((req, res, next) => {
-  console.log("Время:", new Date().toLocaleString("en-GB"));
-  console.log(req.body);
-  next();
-});
-
-router.all("/ruslan", (req, res) => {
+let ruslan = (req, res) => {
   let word = req.body.request.nlu.tokens[req.body.request.nlu.tokens.length - 1];
   let answer;
 
@@ -29,12 +18,7 @@ router.all("/ruslan", (req, res) => {
     else answer = "хуе" + word;
   }
 
-  res.json({ response: { text: answer, tts: `${answer.slice(0, 2)} ${answer.slice(2)}`, end_session: false }, version: "1.0" });
-});
+  res.json({ response: { text: answer, tts: `${answer.slice(0, 2)}${answer.slice(2)}`, end_session: false }, version: "1.0" });
+};
 
-router.use((err, req, res, next) => {
-  console.log(err);
-  res.status(500).send("Что-то пошло не так...");
-});
-
-module.exports = router;
+module.exports = { ruslan };
