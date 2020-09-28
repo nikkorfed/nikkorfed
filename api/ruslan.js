@@ -21,4 +21,4 @@ let ruslan = (req, res) => {
   res.json({ response: { text: answer, tts: `${answer.slice(0, 2)}${answer.slice(2)}`, end_session: false }, version: "1.0" });
 };
 
-module.exports = { ruslan };
+module.exports = ruslan;

@@ -1,3 +1,3 @@
 let fedrych = (req, res) => {};
 
-module.exports = { fedrych };
+module.exports = fedrych;
