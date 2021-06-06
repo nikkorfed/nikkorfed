@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: .
+      args:
+        - NODE_VERSION
+    ports:
+      - ${PORT}:3000
+    restart: on-failure
+    env_file: .env
