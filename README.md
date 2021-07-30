@@ -1,0 +1,3 @@
+- 👋  Hi, I’m Nikita Kornilov (@nikkorfed), a fullstack JavaScript-developer. Living in Ekaterinburg, Russia.
+- 👀  I’m interested in IT, startups and cars.
+- 📫  You can reach me on Instagram (@fedrych) or Telegram (@nikkorfed).
