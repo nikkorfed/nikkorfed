@@ -2,11 +2,10 @@ version: "3.8"
 
 services:
   server:
-    build:
-      context: .
-      args:
-        - NODE_VERSION
+    container_name: nikkorfed
+    image: ghcr.io/nikkorfed/nikkorfed:${NODE_ENV}
+    build: .
     ports:
-      - ${PORT}:3000
+      - 127.0.0.1:${PORT}:${PORT}
     restart: unless-stopped
     env_file: .env
