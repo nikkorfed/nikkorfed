@@ -4,7 +4,10 @@ services:
   server:
     container_name: nikkorfed
     image: ghcr.io/nikkorfed/nikkorfed:${NODE_ENV}
-    build: .
+    build:
+      context: .
+      args:
+        - NODE_VERSION
     ports:
       - 127.0.0.1:${PORT}:${PORT}
     restart: unless-stopped

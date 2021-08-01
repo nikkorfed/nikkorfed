@@ -1,4 +1,5 @@
-FROM node:alpine AS deps
+ARG NODE_VERSION
+FROM node:${NODE_VERSION}-alpine AS deps
 
 WORKDIR /app
 COPY package*.json ./
